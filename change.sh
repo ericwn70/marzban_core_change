@@ -32,7 +32,7 @@ fi
 # Функция загрузки файла
 get_xray_core() {
 # Отправляем запрос к GitHub API для получения информации о последних четырех релизах
-latest_releases=$(curl -s "https://api.github.com/repos/XTLS/Xray-core/releases?per_page=4")
+latest_releases=$(curl -s "https://api.github.com/repos/XTLS/Xray-core/releases?per_page=10")
 
 # Извлекаем версии из JSON-ответа
 versions=($(echo "$latest_releases" | grep -oP '"tag_name": "\K(.*?)(?=")'))
